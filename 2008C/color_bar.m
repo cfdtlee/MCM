@@ -1,5 +1,5 @@
-% 默认图片
-Z=tf;n=7
+%% main_element
+Z=tf;n=3
 bar(Z);
 % 简单的作图
 % 这个图根据数据列中值的大小着色。每列中的
@@ -18,5 +18,6 @@ end
 set(ch,'FaceVertexCData',fvcd)
 
 title('Evaluation of 7 Country''s Health Care System','Fontsize',15)
-text(0,0,'Healthy')
-text(0,0,'Poor')
+%text(0,0,'Healthy')text(0,0,'Poor')text(0,0,'China')text(0,0,'USA')
+%text(0,0,'Congo')text(0,0,'Germany')text(0,0,'Norway')text(0,0,'Japan')
+%% gray_relation
