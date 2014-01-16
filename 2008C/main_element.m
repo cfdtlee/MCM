@@ -1,6 +1,6 @@
 clc,clear
 load metrics.txt %把原始数据保存在纯文本文件metrics.txt中
-metrics(3:9,:)=1./metrics(3:9,:);
+metrics(3:8,:)=1./metrics(3:8,:);
 metrics=metrics';
 metrics_s=zscore(metrics); %数据标准化
 r=corrcoef(metrics_s); %计算相关系数矩阵
