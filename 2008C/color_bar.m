@@ -1,5 +1,5 @@
 %% main_element
-Z=tf;n=3
+Z=r';n=16
 bar(Z);
 % 简单的作图
 % 这个图根据数据列中值的大小着色。每列中的
@@ -11,7 +11,7 @@ ch = get(h,'Children');
 fvd = get(ch,'Faces');
 fvcd = get(ch,'FaceVertexCData');
 [~, izs] = sortrows(Z,1);
-for i = 1:n
+for i = 1:11
     row = izs(i);
     fvcd(fvd(row,:)) = i;
 end
