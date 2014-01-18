@@ -1,4 +1,6 @@
-clc,clear
+%clc,clear
+
+%% main element
 load metrics.txt %把原始数据保存在纯文本文件metrics.txt中
 metrics(3:8,:)=1./metrics(3:8,:);
 metrics=metrics';
@@ -11,7 +13,12 @@ df=metrics_s*x(:,1:4)
 tf=df*z(1:4)/100;
 [stf,ind]=sort(tf,'descend')
 
-class=ceil(2.5+tf);
-for i=1:16
-    if
+%% classify
+cou=16;
+ele=11;
+class=ceil((2.5+tf)/1.666);
+score=zeros(3,ele);
+for i=1:3
+    score(i,:)=mean(metrics(find(class==i),:),1);
 end
+score
