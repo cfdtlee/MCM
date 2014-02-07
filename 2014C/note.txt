@@ -1,0 +1,12 @@
+数据提取：
+去除空格；
+去除年份；
+字符串数组格式存入matlab
+
+构建邻接矩阵：
+取有Erdos=1的人名记为main
+寻找每个Erdos=1人对应的Erdos=2的人和Erdos=1的同名的标记
+
+SARKOZY,ANDRAS下有FUREDI,ZOLTAN
+FUREDI,ZOLTAN下没有SARKOZY,ANDRAS
+所以把relation_511(148,399)=1
