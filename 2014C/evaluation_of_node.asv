@@ -32,8 +32,23 @@ end
 c2=c2./510;
 
 %% 接近中心度c3
+c3=zeros(1,num_main);
 a_temp=a;
-a_temp(a_temp~=M)=0;
-p=sum(a_temp); %guo最短路之和
-
-c3=sum(relation_511)/()/(num_main-1)
+a_temp(a_temp==M)=0;
+p=sum(a_temp); %each点到其他任何点的最短路之和
+for i=1:num_main
+    a_col=a_temp(:,i);
+    a_col=sort(a_col);
+    j=1;
+    min=a_col(j);
+    while min==0 && j<511
+        j=j+1;
+        min=a_col(j);
+    end
+    max=a_col(end);
+    if(max-min~=0) 
+        c3(i)=(p(i)-min*num_main)/(max-min)/(num_main-1);
+    else
+        c3(i)=0;
+    end
+end
