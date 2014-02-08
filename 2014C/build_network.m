@@ -44,13 +44,6 @@ for j=index_main(num_main)+1:num_total
     end
 end
 
-%% »­Í¼
-xy=rand(511,2);
-for i=1:511
-    for j=i:511
-        if relation_511(i,j)
-            plot([xy(i,1),xy(j,1)],[xy(i,2),xy(j,2)]);
-            hold on;
-        end
-    end
-end
+
+
+
